@@ -1,0 +1,10 @@
+import string
+import random
+pass_length = int(input("Enter the length of the password: "))
+upper="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+lower="abcdefghijklmnopqrstuvwxyz"
+digits="0123456789"
+symbols="!@#$%^&*()~{}[]|"
+var=upper+lower+symbols+digits
+password="".join(random.sample(var,pass_length))
+print("Your Password is: ",password)
