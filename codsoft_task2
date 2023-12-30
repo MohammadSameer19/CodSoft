@@ -1,0 +1,49 @@
+print(" "*30+"WELCOME TO MY CALCULATOR"+" "*20+"\n"+"-"*80)
+while True:
+  print("PLEASE SELECT THE BELOW OPERATIONS:")
+  print("1. Addition"+"\n"+"2. Subtraction"+"\n"+"3. Multiplication"+"\n"+"4. Division")
+  print("5. Modular Division"+"\n"+"6. Exit")
+  print("-"*80)
+  choice = int(input("ENTER YOUR CHOICE: "))
+  if choice==6:
+    print("THANK YOU FOR USING MY CALCULATOR!")
+    break
+  elif choice<1 or choice>6:
+    print("\nINVALID CHOICE. PLEASE SELECT A VALID OPTION.\n")
+  else:
+    n = int(input("ENTER THE NUMBER OF OPERANDS(Numbers): "))
+    sum=0
+    sub=0
+    mul=1
+    div=1
+    mod=1
+    for i in range(n):
+      a=float(input("Enter Number "+ str(i+1)+": "))
+      if choice==1:
+        sum=sum+a
+      elif choice==2:
+        if i==0:
+          a=-a
+        sub=sub-a
+      elif choice==3:
+        mul=mul*a 
+      elif choice==4:
+        if i==0:
+          div=a
+        else:
+          div=div/a
+      else:
+        if i==0:
+          mod=a
+        else:
+          mod=mod%a
+  if choice==1:
+    print(f"\nRESULT = {sum}\n")
+  elif choice==2:
+    print(f"\nRESULT = {sub}\n")
+  elif choice==3:
+    print(f"\nRESULT = {mul}\n")
+  elif choice==4:
+    print(f"\nRESULT = {div}\n")
+  elif choice==5:
+    print(f"\nRESULT = {mod}\n")
